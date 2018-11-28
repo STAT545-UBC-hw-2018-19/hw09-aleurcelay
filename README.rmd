@@ -18,7 +18,8 @@ For this assignment, I modified Jenny Brian's original [make activity](https://g
 
 ## New/modified files
 
-* :star2:[Makefile](Makefile): I modified the Makefile to add the new files to the pipeline to generate the new plot and report, the README, and subdirectories to store the images (plots), the data outputs (csv files) and the source data (words.txt file).
+* :star2:[Makefile](Makefile): I modified the Makefile to add the new files to the pipeline that generate the new plot, the new report, the modified README, and to create subdirectories to store the images (plots), the data outputs (csv files) and the source data (words.txt file).
+You can test it by downloading this repo as a ZIP and then running `make clean` and `make all`. 
 * [letteres_freq.R](./R/letters_freq.R) outputs a tsv file containing the frequencies of letters in the `words.txt` file.
 * [report_letter_freq.rmd](report_letter_freq.Rmd) which outputs the [report_letter_freq PDF](report_letter_freq.pdf).
 * [README.rmd](README.rmd) which generates the README.md file with the Frequency of letters plot:
