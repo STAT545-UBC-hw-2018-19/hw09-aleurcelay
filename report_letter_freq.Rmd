@@ -1,0 +1,18 @@
+---
+title: "Letter frequency in English words"
+author: "Alejandra Urcelay"
+date: "27/11/2018"
+output: pdf_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r load-dat, include = FALSE}
+hist_dat <- read.delim("./output_data/histogram.tsv")
+freq_dat <- read.delim("./output_data/letters_freq.tsv")
+```
+
+The file `/usr/share/dict/words` contains `r sum(hist_dat$Freq)` words.
+I computed the absolute frequency of each letter, i.e. the number of times that a letter appears, and made a barplot of these frequencies.
+	![Frequency of letters](./images/letters_freq.png){width=80%}
