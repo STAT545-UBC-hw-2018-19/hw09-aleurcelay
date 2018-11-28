@@ -3,6 +3,7 @@ all: data_dir report.html README.md report_letter_freq.pdf
 clean:
 	rm -rf data images output_data report.md report.html README.md report_letter_freq.pdf
 	
+#Make subdirectories
 data_dir:
 	mkdir -p data
 	mkdir -p images
