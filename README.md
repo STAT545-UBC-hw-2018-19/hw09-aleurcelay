@@ -14,7 +14,7 @@ files to the pipeline.
 
 ## New files
 
-  - [letteres\_freq.r](./R/letters_freq.R) outputs a tsv file containing
+  - [letteres\_freq.R](./R/letters_freq.R) outputs a tsv file containing
     the frequencies of letters in the `words.txt` file.
   - [report\_letter\_freq.rmd](report_letter_freq.Rmd) which outputs the
     [report\_letter\_freq PDF](report_letter_freq.pdf).
