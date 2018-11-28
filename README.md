@@ -12,12 +12,21 @@ For this assignment, I modified Jenny Brian’s original [make
 activity](https://github.com/STAT545-UBC/make-activity) by adding new
 files to the pipeline.
 
-## Added files
+## New files
 
-## Frequency of letters
+  - [letteres\_freq.r](./R/letters_freq.R) outputs a tsv file containing
+    the frequencies of letters in the `words.txt` file.
+  - [report\_letter\_freq.rmd](report_letter_freq.Rmd) which outputs the
+    [report\_letter\_freq PDF](report_letter_freq.pdf).
+  - [README.rmd](README.rmd) which generates the README.md file with the
+    Frequency of letters plot: ![Frequency of
+    letters](./images/letters_freq.png)
 
-This analysis outputs a plot showing the absolute frequencies of letters
-in `words.txt` The source code for this analysis can be reviewed
-[here](letters_freq.R)
+## Makefile
 
-![Frequency of letters](./images/letters_freq.png)
+To review my makefile: :star2:[Makefile](Makefile)
+
+I modified the Makefile to add the new files to the pipeline to generate
+the new plot and report, the README, and subdirectories to store the
+images (plots), the data outputs (csv files) and the source data
+(words.txt file).

@@ -1,7 +1,7 @@
-all: data_dir report.html README.md
+all: data_dir report.html README.md report_letter_freq.pdf
 
 clean:
-	rm -rf data images output_data report.md report.html README.md
+	rm -rf data images output_data report.md report.html README.md report_letter_freq.pdf
 	
 data_dir:
 	mkdir -p data
@@ -21,6 +21,9 @@ README.md: README.Rmd ./images/letters_freq.png
 
 ./output_data/histogram.tsv: ./R/histogram.r ./data/words.txt
 	Rscript $<
+	
+report_letter_freq.pdf: report_letter_freq.Rmd ./images/letters_freq.png ./output_data/histogram.tsv ./output_data/letters_freq.tsv
+	Rscript -e 'rmarkdown::render("$<")'
 	
 ./images/letters_freq.png: ./output_data/letters_freq.tsv
 	Rscript -e 'library(ggplot2); ggplot(data=read.delim("$<"), aes(x=letter, y=frequency)) + labs (title = "Absolute frequency of letters in words") + geom_bar(stat = "identity", fill= "plum") ; ggsave("$@")'
