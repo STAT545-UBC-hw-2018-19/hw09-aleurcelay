@@ -15,9 +15,11 @@ files to the pipeline.
 ## New/modified files
 
   - :star2:[Makefile](Makefile): I modified the Makefile to add the new
-    files to the pipeline to generate the new plot and report, the
-    README, and subdirectories to store the images (plots), the data
-    outputs (csv files) and the source data (words.txt file).
+    files to the pipeline that generate the new plot, the new report,
+    the modified README, and to create subdirectories to store the
+    images (plots), the data outputs (csv files) and the source data
+    (words.txt file). You can test it by downloading this repo as a ZIP
+    and then running `make clean` and `make all`.
   - [letteres\_freq.R](./R/letters_freq.R) outputs a tsv file containing
     the frequencies of letters in the `words.txt` file.
   - [report\_letter\_freq.rmd](report_letter_freq.Rmd) which outputs the
