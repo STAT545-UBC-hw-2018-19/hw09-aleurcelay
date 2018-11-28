@@ -1,4 +1,4 @@
-words <- readLines("./Data/words.txt")
+words <- readLines("./data/words.txt")
 words_lower <-tolower(words) #avoid letter repetition due to capitalization
 
 #compute letter frequency
@@ -8,5 +8,5 @@ colnames(letters_freq) <- c("letter", "frequency")
 as.factor(letters_freq$letter)
 
 #write tsv
-write.table(letters_freq, "letters_freq.tsv",
+write.table(letters_freq, "./output_data/letters_freq.tsv",
 					sep = "\t", row.names = FALSE, quote = FALSE)
